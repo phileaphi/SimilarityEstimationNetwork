@@ -1,0 +1,44 @@
+{
+    "autotune_lr": true,
+    "batch_size": 356,
+    "dataset": "K49",
+    "epochs": 20,
+    "last_epoch": 19,
+    "loss_fn": "CrossEntropyLoss",
+    "model": "Resnet",
+    "model_args": {
+        "block": "BasicBlock",
+        "dropout": 0.042887768824028366,
+        "layers": [
+            2,
+            2,
+            2,
+            2
+        ],
+        "zero_init_residual": false
+    },
+    "optim_args": {
+        "amsgrad": false,
+        "lr": 0.00595,
+        "nesterov": false,
+        "weight_decay": 0.6066258491049846
+    },
+    "optimizer": "AdamW",
+    "test_batch_size": 356,
+    "test_score": 89.24689157086996,
+    "train_batch_size": 356,
+    "transform_args": {
+        "degrees": 60.0,
+        "dist_scale": 0.2,
+        "elastic_coeffs": [
+            0.75,
+            0.4
+        ],
+        "resize_target": 64
+    },
+    "transforms": "OCR",
+    "val_batch_size": 356,
+    "val_score": 92.66101997210227,
+    "warmstart": true,
+    "warmstart_path": "KMNIST/Resnet_20190915-194138.pth"
+}

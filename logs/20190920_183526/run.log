@@ -1,0 +1,116 @@
+2019-09-20 18:35:28,928 INFO bohb_search.py: START BOHB ITERATION
+2019-09-20 18:35:28,929 INFO bohb_search.py: CONFIG:
+{   'autotune_lr': True,
+    'batch_size': 724,
+    'dataset': 'K49',
+    'epochs': 20,
+    'loss_fn': 'CrossEntropyLoss',
+    'model': 'BaselineCNN',
+    'model_args': {   'dropout': 0.6132954509820756,
+                      'n_layers': 1,
+                      'zero_init_residual': True},
+    'optim_args': {   'amsgrad': True,
+                      'nesterov': False,
+                      'weight_decay': 0.9508353803229591},
+    'optimizer': 'Adam',
+    'transform_args': {   'degrees': 60.0,
+                          'dist_scale': 0.2,
+                          'elastic_coeffs': [0.75, 0.4],
+                          'resize_target': 28},
+    'transforms': 'NONE',
+    'warmstart': False}
+2019-09-20 18:35:28,930 INFO bohb_search.py: BUDGET: 20.0
+2019-09-20 18:35:28,930 WARNING bohb_search.py: BaselineCNN does not support zero_init_residual
+2019-09-20 18:35:28,945 INFO bohb_search.py: START BOHB ITERATION
+2019-09-20 18:35:28,947 INFO bohb_search.py: CONFIG:
+{   'autotune_lr': True,
+    'batch_size': 748,
+    'dataset': 'K49',
+    'epochs': 20,
+    'loss_fn': 'CrossEntropyLoss',
+    'model': 'BaselineCNN',
+    'model_args': {   'dropout': 0.3272863980833804,
+                      'n_layers': 1,
+                      'zero_init_residual': True},
+    'optim_args': {   'amsgrad': False,
+                      'nesterov': False,
+                      'weight_decay': 0.8496938997776102},
+    'optimizer': 'AdamW',
+    'transform_args': {   'degrees': 60.0,
+                          'dist_scale': 0.2,
+                          'elastic_coeffs': [0.75, 0.4],
+                          'resize_target': 28},
+    'transforms': 'OCR',
+    'warmstart': True}
+2019-09-20 18:35:28,948 INFO bohb_search.py: BUDGET: 20.0
+2019-09-20 18:35:28,948 WARNING bohb_search.py: BaselineCNN does not support zero_init_residual
+2019-09-20 18:35:28,963 INFO bohb_search.py: START BOHB ITERATION
+2019-09-20 18:35:28,965 INFO bohb_search.py: CONFIG:
+{   'autotune_lr': True,
+    'batch_size': 837,
+    'dataset': 'K49',
+    'epochs': 20,
+    'loss_fn': 'CrossEntropyLoss',
+    'model': 'Resnet',
+    'model_args': {   'block': 'BasicBlock',
+                      'dropout': 0.41338987368072644,
+                      'layers': [2, 2, 2, 2],
+                      'zero_init_residual': True},
+    'optim_args': {   'amsgrad': False,
+                      'nesterov': True,
+                      'weight_decay': 0.3038544866022692},
+    'optimizer': 'Adam',
+    'transform_args': {   'degrees': 60.0,
+                          'dist_scale': 0.2,
+                          'elastic_coeffs': [0.75, 0.4],
+                          'resize_target': 64},
+    'transforms': 'NONE',
+    'warmstart': False}
+2019-09-20 18:35:28,966 INFO bohb_search.py: BUDGET: 20.0
+2019-09-20 18:35:28,966 WARNING bohb_search.py: Vanilla Adam does not support nesterov
+2019-09-20 18:35:28,981 INFO bohb_search.py: START BOHB ITERATION
+2019-09-20 18:35:28,983 INFO bohb_search.py: CONFIG:
+{   'autotune_lr': True,
+    'batch_size': 749,
+    'dataset': 'K49',
+    'epochs': 20,
+    'loss_fn': 'CrossEntropyLoss',
+    'model': 'BaselineCNN',
+    'model_args': {   'dropout': 0.29279669799901725,
+                      'n_layers': 1,
+                      'zero_init_residual': True},
+    'optim_args': {   'amsgrad': False,
+                      'nesterov': True,
+                      'weight_decay': 0.4047394550765455},
+    'optimizer': 'Adam',
+    'transform_args': {   'degrees': 60.0,
+                          'dist_scale': 0.2,
+                          'elastic_coeffs': [0.75, 0.4],
+                          'resize_target': 28},
+    'transforms': 'OCR',
+    'warmstart': False}
+2019-09-20 18:35:28,983 INFO bohb_search.py: BUDGET: 20.0
+2019-09-20 18:35:28,983 WARNING bohb_search.py: Vanilla Adam does not support nesterov
+2019-09-20 18:35:28,998 INFO bohb_search.py: START BOHB ITERATION
+2019-09-20 18:35:29,000 INFO bohb_search.py: CONFIG:
+{   'autotune_lr': True,
+    'batch_size': 952,
+    'dataset': 'K49',
+    'epochs': 20,
+    'loss_fn': 'CrossEntropyLoss',
+    'model': 'Resnet',
+    'model_args': {   'block': 'BasicBlock',
+                      'dropout': 0.10491213524865427,
+                      'layers': [2, 2, 2, 2],
+                      'zero_init_residual': True},
+    'optim_args': {   'amsgrad': True,
+                      'nesterov': True,
+                      'weight_decay': 0.22961160421571072},
+    'optimizer': 'AdamW',
+    'transform_args': {   'degrees': 60.0,
+                          'dist_scale': 0.2,
+                          'elastic_coeffs': [0.75, 0.4],
+                          'resize_target': 64},
+    'transforms': 'NONE',
+    'warmstart': False}
+2019-09-20 18:35:29,000 INFO bohb_search.py: BUDGET: 20.0

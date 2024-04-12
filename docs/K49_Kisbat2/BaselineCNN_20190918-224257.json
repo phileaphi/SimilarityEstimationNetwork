@@ -1,0 +1,38 @@
+{
+    "autotune_lr": true,
+    "batch_size": 892,
+    "dataset": "K49",
+    "epochs": 20,
+    "last_epoch": 19,
+    "loss_fn": "CrossEntropyLoss",
+    "model": "BaselineCNN",
+    "model_args": {
+        "dropout": 0.7433083348814732,
+        "n_layers": 1,
+        "zero_init_residual": false
+    },
+    "optim_args": {
+        "amsgrad": true,
+        "lr": 0.0034300000000000003,
+        "nesterov": false,
+        "weight_decay": 0.23788840934557404
+    },
+    "optimizer": "AdamW",
+    "test_batch_size": 892,
+    "test_score": 37.98220226038358,
+    "train_batch_size": 892,
+    "transform_args": {
+        "degrees": 60.0,
+        "dist_scale": 0.2,
+        "elastic_coeffs": [
+            0.75,
+            0.4
+        ],
+        "resize_target": 28
+    },
+    "transforms": "OCR",
+    "val_batch_size": 892,
+    "val_score": 41.41442948908978,
+    "warmstart": false,
+    "warmstart_path": null
+}

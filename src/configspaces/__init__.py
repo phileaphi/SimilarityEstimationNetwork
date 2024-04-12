@@ -1,0 +1,1 @@
+from .k49 import K49CS, BASELINECNN_CFG, RESNET18_CFG  # noqa

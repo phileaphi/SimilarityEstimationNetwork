@@ -1,0 +1,61 @@
+{
+    "lpi": {
+        "imp": {
+            "batch_size": 1.2106245076612763e-30,
+            "model": 0.7159569019350677,
+            "model_args.dropout": 1.2106245076612763e-30,
+            "model_args.zero_init_residual": 0.0,
+            "optim_args.amsgrad": 0.0,
+            "optim_args.nesterov": 0.0,
+            "optim_args.weight_decay": 0.28404309806493233,
+            "optimizer": 0.0,
+            "transforms": 0.0,
+            "warmstart": 0.0
+        },
+        "order": [
+            "model",
+            "optim_args.weight_decay",
+            "batch_size",
+            "model_args.dropout",
+            "model_args.zero_init_residual",
+            "optim_args.amsgrad",
+            "optim_args.nesterov",
+            "optimizer",
+            "transforms",
+            "warmstart"
+        ]
+    }
+}l": 0.47392128515153403,
+            "model_args.dropout": 0.0052934902799425115,
+            "model_args.zero_init_residual": 0.01587012892757622,
+            "optim_args.amsgrad": 0.00014443891538801838,
+            "optim_args.nesterov": 0.0025226880007772666,
+            "optim_args.weight_decay": 0.22155823426167875,
+            "optimizer": 1.2607111664519073e-16,
+            "transforms": 0.0620957432931108,
+            "warmstart": 0.14160532290965655
+        },
+        "order": [
+            "model",
+            "optim_args.weight_decay",
+            "warmstart",
+            "transforms",
+            "model_args.zero_init_residual",
+            "batch_size",
+            "model_args.dropout",
+            "optim_args.nesterov",
+            "optim_args.amsgrad",
+            "optimizer",
+            "['model', 'optim_args.weight_decay']",
+            "['model', 'warmstart']",
+            "['model', 'transforms']",
+            "['model', 'model_args.zero_init_residual']",
+            "['optim_args.weight_decay', 'warmstart']",
+            "['optim_args.weight_decay', 'transforms']",
+            "['optim_args.weight_decay', 'model_args.zero_init_residual']",
+            "['warmstart', 'transforms']",
+            "['warmstart', 'model_args.zero_init_residual']",
+            "['transforms', 'model_args.zero_init_residual']"
+        ]
+    }
+}

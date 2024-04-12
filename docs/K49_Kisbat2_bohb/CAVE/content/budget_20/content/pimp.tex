@@ -1,0 +1,33 @@
+\begin{table}
+\begin{tabular}{r|r|r}
+\toprule
+                                                             & fANOVA &  LPI  \\
+\hline
+model                                                        & $ 47.392$ & $ 71.596$\\
+optim_args.weight_decay                                      & $ 22.156$ & $ 28.404$\\
+warmstart                                                    & $ 14.161$ & $ 0.000$\\
+transforms                                                   & $ 6.210$ & $ 0.000$\\
+model_args.zero_init_residual                                & $ 1.587$ & $ 0.000$\\
+batch_size                                                   & $ 1.024$ & $ 0.000$\\
+model_args.dropout                                           & $ 0.529$ & $ 0.000$\\
+optim_args.nesterov                                          & $ 0.252$ & $ 0.000$\\
+optim_args.amsgrad                                           & $ 0.014$ & $ 0.000$\\
+optimizer                                                    & $ 0.000$ & $ 0.000$\\
+['model', 'optim_args.weight_decay']                         & $ 1.182$ &      -\\
+['model', 'warmstart']                                       & $ 1.373$ &      -\\
+['model', 'transforms']                                      & $ 0.000$ &      -\\
+['model', 'model_args.zero_init_residual']                   & $ 1.197$ &      -\\
+['optim_args.weight_decay', 'warmstart']                     & $ 0.053$ &      -\\
+['optim_args.weight_decay', 'transforms']                    & $ 0.020$ &      -\\
+['optim_args.weight_decay', 'model_args.zero_init_residual'] & $ 0.001$ &      -\\
+['warmstart', 'transforms']                                  & $ 0.000$ &      -\\
+['warmstart', 'model_args.zero_init_residual']               & $ 0.390$ &      -\\
+['transforms', 'model_args.zero_init_residual']              & $ 0.000$ &      -\\
+\bottomrule
+\end{tabular}
+\caption{Parameter Importance values, obtained using the PIMP package. Ablation values are percentages of improvement a single parameter change obtained between the default and an incumbent configuration.
+fANOVA values are percentages that show how much variance across the whole ConfigSpace can be explained by that parameter.
+Forward Selection values are RMSE values obtained using only a subset of parameters for prediction.
+fANOVA and Forward Selection try to estimate the importances across the whole parameter space, while ablation tries to estimate them between two given configurations.}
+\label{tab:pimp}
+\end{table}

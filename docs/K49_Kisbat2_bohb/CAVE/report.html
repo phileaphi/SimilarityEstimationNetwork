@@ -1,0 +1,533 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+<title>CAVE</title>
+<link href="html/css/accordion.css" rel="stylesheet" />
+<link href="html/css/table.css" rel="stylesheet" />
+<link href="html/css/lightbox.min.css" rel="stylesheet" />
+<link href="html/css/help-tip.css" rel="stylesheet" />
+<link href="html/css/global.css" rel="stylesheet" />
+<link href="html/css/back-to-top.css" rel="stylesheet" />
+<link href="html/css/tabs.css" rel="stylesheet" />
+
+<link href="html/css/bokeh-1.1.0.min.css" rel="stylesheet" type="text/css">
+<link href="html/css/bokeh-widgets-1.1.0.min.css" rel="stylesheet" type="text/css">
+<link href="html/css/bokeh-tables-1.1.0.min.css" rel="stylesheet" type="text/css">
+
+<script src="html/js/tabs.js"></script>
+
+<script src="html/js/bokeh-1.1.0.min.js"></script>
+<script src="html/js/bokeh-widgets-1.1.0.min.js"></script>
+<script src="html/js/bokeh-tables-1.1.0.min.js"></script>
+
+<!--Below here are the includes of scripts for the report (e.g. bokeh)-->
+<script src="content/js/BOHBLearningCurves_20_45_script.js"></script>
+<script src="content/js/BudgetCorrelation_20_46_script.js"></script>
+<script src="content/js/Interactive_20_47_script.js"></script>
+<script src="content/js/CostOverTime_20_48_script.js"></script>
+<script src="content/js/budget_20_20_51_script.js"></script>
+
+<!--Above here are the includes of scripts for the report (e.g. bokeh)-->
+
+</head>
+<body>
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="html/js/lightbox-plus-jquery.min.js"></script>
+<header>
+    <div class='l-wrapper'>
+        <img class='logo logo--configurator' src="html/images/BOHB_logo.png" />
+        <img class='logo logo--ml' src="html/images/automl-logo.png" />
+    </div>
+</header>
+<div class='l-wrapper'>
+<h1>CAVE</h1>
+<div class="accordion">Meta Data <div class="help-tip"><p>Meta data, i.e. number of instances and parameters as well as configuration budget. Statistics apply to the best run, if multiple configurator runs are compared.</p></div></div>
+<div class="panel">
+<div class="accordion">General <div class="help-tip"><p>General information about the optimization scenario.</p></div></div>
+<div class="panel">
+<div style="overflow-x: auto" align="center">
+<table border="1" class="dataframe">
+  <tbody>
+    <tr>
+      <th># aggregated parallel BOHB runs</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th># parameters</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>Deterministic target algorithm</th>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>Optimized run objective</th>
+      <td>quality</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div><div class="accordion">Run-Specific <div class="help-tip"><p>Information to specific runs (if there are multiple runs). Interesting for parallel optimizations or usage of budgets/fidelities.</p></div></div>
+<div class="panel">
+<div style="overflow-x: auto" align="center">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th></th>
+      <th>budget 20</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Total time spent evaluating configurations</th>
+      <td>80808.01 sec</td>
+    </tr>
+    <tr>
+      <th>Average time per configuration (mean / std)</th>
+      <td>5387.20 sec (± 2579.16)</td>
+    </tr>
+    <tr>
+      <th># evaluated configurations</th>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th># changed parameters (default to incumbent)</th>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>Configuration origins</th>
+      <td>Random : 9, Acquisition Function : 6</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div><div class="accordion">Configuration Space <div class="help-tip"><p>The parameter configuration space. (See github.com/automl/ConfigSpace)</p></div></div>
+<div class="panel">
+<div style="overflow-x: auto" align="center">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Range/Choices</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>batch_size</td>
+      <td>UniformIntegerHyperparameter</td>
+      <td>[96, 1000]</td>
+      <td>548</td>
+    </tr>
+    <tr>
+      <td>model</td>
+      <td>CategoricalHyperparameter</td>
+      <td>('BaselineCNN', 'Resnet')</td>
+      <td>BaselineCNN</td>
+    </tr>
+    <tr>
+      <td>model_args.dropout</td>
+      <td>UniformFloatHyperparameter</td>
+      <td>[0.0, 0.8]</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <td>model_args.zero_init_residual</td>
+      <td>CategoricalHyperparameter</td>
+      <td>(True, False)</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>optim_args.amsgrad</td>
+      <td>CategoricalHyperparameter</td>
+      <td>(True, False)</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>optim_args.nesterov</td>
+      <td>CategoricalHyperparameter</td>
+      <td>(True, False)</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>optim_args.weight_decay</td>
+      <td>UniformFloatHyperparameter</td>
+      <td>[0.001, 0.999]</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>optimizer</td>
+      <td>CategoricalHyperparameter</td>
+      <td>('Adam', 'AdamW')</td>
+      <td>Adam</td>
+    </tr>
+    <tr>
+      <td>transforms</td>
+      <td>CategoricalHyperparameter</td>
+      <td>('NONE', 'OCR')</td>
+      <td>NONE</td>
+    </tr>
+    <tr>
+      <td>warmstart</td>
+      <td>CategoricalHyperparameter</td>
+      <td>(True, False)</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div></div><div class="accordion">Incumbents Over Budgets <div class="help-tip"><p>Show the incumbents for each budget (i.e. the best configuration by kernel-estimation using data from that budget).</p></div></div>
+<div class="panel">
+<div style="overflow-x: auto" align="center">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>budget 20</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>batch_size</th>
+      <td>416</td>
+    </tr>
+    <tr>
+      <th>model</th>
+      <td>Resnet</td>
+    </tr>
+    <tr>
+      <th>model_args.dropout</th>
+      <td>0.186317</td>
+    </tr>
+    <tr>
+      <th>optim_args.amsgrad</th>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>optim_args.weight_decay</th>
+      <td>0.00261444</td>
+    </tr>
+    <tr>
+      <th>optimizer</th>
+      <td>AdamW</td>
+    </tr>
+    <tr>
+      <th>transforms</th>
+      <td>OCR</td>
+    </tr>
+    <tr>
+      <th>Cost</th>
+      <td>-96.798</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div><div class="accordion">BOHB Learning Curves <div class="help-tip"><p>Visualizing the learning curves of all individual HyperBand-iterations. Model-based picks are marked with a cross. The config-id tuple denotes (iteration, stage, id_within_stage), where the iteration is the hyperband iteration and the stage is the index of the budget in which the configuration was first sampled (should be 0). The third index is just a sequential enumeration. This id can be interpreted as a nested index-identifier.</p></div></div>
+<div class="panel">
+<div align="center">
+
+<div class="bk-root" id="7d860835-4c73-4fc0-894e-5839064425b7" data-root-id="1470"></div>
+</div>
+</div><div class="accordion">Budget Correlation <div class="help-tip"><p>Use spearman correlation to get a correlation-value and a p-value for every pairwise combination of budgets. First value is the correlation, second is the p-value (the p-value roughly estimates the likelihood to obtain this correlation coefficient with uncorrelated datasets). This can be used to estimate how well a budget approximates the function to be optimized.</p></div></div>
+<div class="panel">
+<div align="center">
+
+<div class="bk-root" id="d259c023-b68e-481d-97c8-e62188a63915" data-root-id="1051"></div>
+</div>
+</div><div class="accordion">Configurators Behavior </div>
+<div class="panel">
+<div class="accordion">Configurator Footprint <div class="help-tip"><p>Analysis of the iteratively sampled configurations during the optimization procedure.  Multi-dimensional scaling (MDS) is used to reduce dimensionality of the search space and plot the distribution of evaluated configurations. The larger the dot, the more often the configuration was evaluated on instances from the set. Configurations that were incumbents at least once during optimization are marked as red squares.  Configurations acquired through local search are marked with a 'x'.  The downward triangle denotes the final incumbent, whereas the orange upward triangle denotes the default configuration.  The heatmap and the colorbar correspond to the predicted performance in that part of the search space.  </p></div></div>
+<div class="panel">
+<div class="accordion">Interactive </div>
+<div class="panel">
+<div align="center">
+
+<div class="bk-root" id="05491eaf-bf60-4257-9a15-55a8360b6b12" data-root-id="2351"></div>
+</div>
+</div><div class="accordion">Static </div>
+<div class="panel">
+<div align="center">
+<a href="cfp_over_time/configurator_footprint0.png" data-lightbox="['CAVE_output_2019-09-20_18:46:18_320325/cfp_over_time/configurator_footprint0.png', 'CAVE_output_2019-09-20_18:46:18_320325/cfp_over_time/configurator_footprint1.png', 'CAVE_output_2019-09-20_18:46:18_320325/cfp_over_time/configurator_footprint2.png']" data-title="cfp_over_time/configurator_footprint0.png"><img src="cfp_over_time/configurator_footprint0.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." style="float: left; width: 32%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+<a href="cfp_over_time/configurator_footprint1.png" data-lightbox="['CAVE_output_2019-09-20_18:46:18_320325/cfp_over_time/configurator_footprint0.png', 'CAVE_output_2019-09-20_18:46:18_320325/cfp_over_time/configurator_footprint1.png', 'CAVE_output_2019-09-20_18:46:18_320325/cfp_over_time/configurator_footprint2.png']" data-title="cfp_over_time/configurator_footprint1.png"><img src="cfp_over_time/configurator_footprint1.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." style="float: left; width: 32%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+<a href="cfp_over_time/configurator_footprint2.png" data-lightbox="['CAVE_output_2019-09-20_18:46:18_320325/cfp_over_time/configurator_footprint0.png', 'CAVE_output_2019-09-20_18:46:18_320325/cfp_over_time/configurator_footprint1.png', 'CAVE_output_2019-09-20_18:46:18_320325/cfp_over_time/configurator_footprint2.png']" data-title="cfp_over_time/configurator_footprint2.png"><img src="cfp_over_time/configurator_footprint2.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." style="float: left; width: 32%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+<p style="clear: both;"></div>
+</div></div><div class="accordion">Cost Over Time <div class="help-tip"><p>Depicts the average cost of the best so far found configuration (using all trajectory data) over the time spent by the configurator (including target algorithm runs and the overhead generated by the configurator) If the curve flattens out early, it indicates that too much time was spent for the configurator run; whereas a curve that is still improving at the end of the budget indicates that one should increase the configuration budget. The plotted standard deviation gives the uncertainty over multiple configurator runs.  </p></div></div>
+<div class="panel">
+<div align="center">
+
+<div class="bk-root" id="f4fff923-a407-4f6f-9604-c2cfda1a98a3" data-root-id="2664"></div>
+</div>
+</div><div class="accordion">Parallel Coordinates <div class="help-tip"><p>Previously used by Golovin et al.  to study the frequency of chosen parameter settings in black-box-optimization.  Each line corresponds to one configuration in the runhistory and shows the parameter settings and the corresponding (estimated) average cost. To handle large configuration spaces with hundreds of parameters, the (at most) 10 most important parameters based on a fANOVA parameter importance analysis are plotted.  To emphasize better configurations, the performance is encoded in the color of each line, ranging from blue to red. These plots provide insights into whether the configurator focused on specific parameter values and how these correlate to their costs.  NOTE: the given runhistory should contain only optimization and no validation to analyze the explored parameter-space.  </p></div></div>
+<div class="panel">
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Parallel Coordinates', 'budget 20')" id="defaultOpen49">budget 20</button>
+</div>
+<div id="Parallel Coordinatesbudget 20" class="tabcontent">
+<div class="pane">
+Error occured: Both *x_transform* and *y_transform* must be 2D affine transforms</div>
+</div>
+<script> 
+// Get the element with id="defaultOpen49" and click on it 
+document.getElementById("defaultOpen49").click(); 
+</script> 
+</div></div><div class="accordion">Parameter Importance <div class="help-tip"><p>
+Parameter Importance analysis to determine
+which of the parameters most influence the
+analysed algorithms performance.</p></div></div>
+<div class="panel">
+<div class="accordion">Importance Table <div class="help-tip"><p>Parameters are initially sorted by average. Only parameters with an importance greater than 5 in any of the methods are shown.  Note, that the values of the used methods are not directly comparable. For more information on the metrics, see respective tooltips.</p></div></div>
+<div class="panel">
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Importance Table', 'budget 20')" id="defaultOpen50">budget 20</button>
+</div>
+<div id="Importance Tablebudget 20" class="tabcontent">
+<div class="pane">
+<div align="center">
+
+<div class="bk-root" id="74ef01cf-23ee-4a57-86ed-7060324f25b8" data-root-id="2850"></div>
+</div>
+</div>
+</div>
+<script> 
+// Get the element with id="defaultOpen50" and click on it 
+document.getElementById("defaultOpen50").click(); 
+</script> 
+</div><div class="accordion">fANOVA <div class="help-tip"><p>fANOVA (functional analysis of variance) computes the fraction of the variance in the cost space explained by changing a parameter by marginalizing over all other parameters, for each parameter (or for pairs of parameters). Parameters with high importance scores will have a large impact on the performance.  To this end, a random forest is trained as an empirical performance model on the available empirical data from the available runhistories.</p></div></div>
+<div class="panel">
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'fANOVA', 'budget 20')" id="defaultOpen52">budget 20</button>
+</div>
+<div id="fANOVAbudget 20" class="tabcontent">
+<div class="pane">
+<div class="accordion">Importance </div>
+<div class="panel">
+<div style="overflow-x: auto" align="center">
+<table border="1" class="dataframe">
+  <tbody>
+    <tr>
+      <th>-------------------- Single importance: --------------------</th>
+      <td>--------------------</td>
+    </tr>
+    <tr>
+      <th>model</th>
+      <td>47.3921 +/- 40.1476</td>
+    </tr>
+    <tr>
+      <th>optim_args.weight_decay</th>
+      <td>22.1558 +/- 37.8247</td>
+    </tr>
+    <tr>
+      <th>warmstart</th>
+      <td>14.1605 +/- 30.2982</td>
+    </tr>
+    <tr>
+      <th>transforms</th>
+      <td>6.2096 +/- 24.0496</td>
+    </tr>
+    <tr>
+      <th>model_args.zero_init_residual</th>
+      <td>1.587 +/- 3.4368</td>
+    </tr>
+    <tr>
+      <th>batch_size</th>
+      <td>1.0237 +/- 2.2601</td>
+    </tr>
+    <tr>
+      <th>model_args.dropout</th>
+      <td>0.5293 +/- 0.9404</td>
+    </tr>
+    <tr>
+      <th>optim_args.nesterov</th>
+      <td>0.2523 +/- 0.977</td>
+    </tr>
+    <tr>
+      <th>-------------------- Pairwise importance: --------------------</th>
+      <td>--------------------</td>
+    </tr>
+    <tr>
+      <th>model & warmstart</th>
+      <td>1.3733 +/- 5.1771</td>
+    </tr>
+    <tr>
+      <th>model & model_args.zero_init_residual</th>
+      <td>1.1967 +/- 3.2343</td>
+    </tr>
+    <tr>
+      <th>model & optim_args.weight_decay</th>
+      <td>1.1823 +/- 1.6723</td>
+    </tr>
+    <tr>
+      <th>warmstart & model_args.zero_init_residual</th>
+      <td>0.3903 +/- 1.5115</td>
+    </tr>
+    <tr>
+      <th>optim_args.weight_decay & warmstart</th>
+      <td>0.0526 +/- 0.1675</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div><div class="accordion">Marginals </div>
+<div class="panel">
+<div class="accordion">model </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/fanova/model.png" data-lightbox="content/budget_20/content/fanova/model.png" data-title="content/budget_20/content/fanova/model.png"><img src="content/budget_20/content/fanova/model.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">optim_args.weight_decay </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/fanova/optim_args.weight_decay.png" data-lightbox="content/budget_20/content/fanova/optim_args.weight_decay.png" data-title="content/budget_20/content/fanova/optim_args.weight_decay.png"><img src="content/budget_20/content/fanova/optim_args.weight_decay.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">warmstart </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/fanova/warmstart.png" data-lightbox="content/budget_20/content/fanova/warmstart.png" data-title="content/budget_20/content/fanova/warmstart.png"><img src="content/budget_20/content/fanova/warmstart.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">transforms </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/fanova/transforms.png" data-lightbox="content/budget_20/content/fanova/transforms.png" data-title="content/budget_20/content/fanova/transforms.png"><img src="content/budget_20/content/fanova/transforms.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">model_args.zero_init_residual </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/fanova/model_args.zero_init_residual.png" data-lightbox="content/budget_20/content/fanova/model_args.zero_init_residual.png" data-title="content/budget_20/content/fanova/model_args.zero_init_residual.png"><img src="content/budget_20/content/fanova/model_args.zero_init_residual.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">batch_size </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/fanova/batch_size.png" data-lightbox="content/budget_20/content/fanova/batch_size.png" data-title="content/budget_20/content/fanova/batch_size.png"><img src="content/budget_20/content/fanova/batch_size.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">model_args.dropout </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/fanova/model_args.dropout.png" data-lightbox="content/budget_20/content/fanova/model_args.dropout.png" data-title="content/budget_20/content/fanova/model_args.dropout.png"><img src="content/budget_20/content/fanova/model_args.dropout.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">optim_args.nesterov </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/fanova/optim_args.nesterov.png" data-lightbox="content/budget_20/content/fanova/optim_args.nesterov.png" data-title="content/budget_20/content/fanova/optim_args.nesterov.png"><img src="content/budget_20/content/fanova/optim_args.nesterov.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div></div><div class="accordion">Pairwise Marginals </div>
+<div class="panel">
+<div class="accordion">model & warmstart </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/fanova/model_warmstart.png" data-lightbox="content/budget_20/content/fanova/model_warmstart.png" data-title="content/budget_20/content/fanova/model_warmstart.png"><img src="content/budget_20/content/fanova/model_warmstart.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">model & model_args.zero_init_residual </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/fanova/model_model_args.zero_init_residual.png" data-lightbox="content/budget_20/content/fanova/model_model_args.zero_init_residual.png" data-title="content/budget_20/content/fanova/model_model_args.zero_init_residual.png"><img src="content/budget_20/content/fanova/model_model_args.zero_init_residual.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">model & optim_args.weight_decay </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/fanova/model_optim_args.weight_decay.png" data-lightbox="content/budget_20/content/fanova/model_optim_args.weight_decay.png" data-title="content/budget_20/content/fanova/model_optim_args.weight_decay.png"><img src="content/budget_20/content/fanova/model_optim_args.weight_decay.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">warmstart & model_args.zero_init_residual </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/fanova/warmstart_model_args.zero_init_residual.png" data-lightbox="content/budget_20/content/fanova/warmstart_model_args.zero_init_residual.png" data-title="content/budget_20/content/fanova/warmstart_model_args.zero_init_residual.png"><img src="content/budget_20/content/fanova/warmstart_model_args.zero_init_residual.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">optim_args.weight_decay & warmstart </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/fanova/optim_args.weight_decay_warmstart.png" data-lightbox="content/budget_20/content/fanova/optim_args.weight_decay_warmstart.png" data-title="content/budget_20/content/fanova/optim_args.weight_decay_warmstart.png"><img src="content/budget_20/content/fanova/optim_args.weight_decay_warmstart.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div></div></div>
+</div>
+<script> 
+// Get the element with id="defaultOpen52" and click on it 
+document.getElementById("defaultOpen52").click(); 
+</script> 
+</div><div class="accordion">Local Parameter Importance (LPI) <div class="help-tip"><p>Using an empirical performance model, performance changes of a configuration along each parameter are calculated. To quantify the importance of a parameter value, the variance of all cost values by changing that parameter are predicted and then the fraction of all variances is computed. This analysis is inspired by the human behaviour to look for improvements in the neighborhood of individual parameters of a configuration.</p></div></div>
+<div class="panel">
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Local Parameter Importance (LPI)', 'budget 20')" id="defaultOpen53">budget 20</button>
+</div>
+<div id="Local Parameter Importance (LPI)budget 20" class="tabcontent">
+<div class="pane">
+<div class="accordion">model </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/lpi/model.png" data-lightbox="content/budget_20/content/lpi/model.png" data-title="content/budget_20/content/lpi/model.png"><img src="content/budget_20/content/lpi/model.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">optim_args.weight_decay </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/lpi/optim_args.weight_decay.png" data-lightbox="content/budget_20/content/lpi/optim_args.weight_decay.png" data-title="content/budget_20/content/lpi/optim_args.weight_decay.png"><img src="content/budget_20/content/lpi/optim_args.weight_decay.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">batch_size </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/lpi/batch_size.png" data-lightbox="content/budget_20/content/lpi/batch_size.png" data-title="content/budget_20/content/lpi/batch_size.png"><img src="content/budget_20/content/lpi/batch_size.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">model_args.dropout </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/lpi/model_args.dropout.png" data-lightbox="content/budget_20/content/lpi/model_args.dropout.png" data-title="content/budget_20/content/lpi/model_args.dropout.png"><img src="content/budget_20/content/lpi/model_args.dropout.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">model_args.zero_init_residual </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/lpi/model_args.zero_init_residual.png" data-lightbox="content/budget_20/content/lpi/model_args.zero_init_residual.png" data-title="content/budget_20/content/lpi/model_args.zero_init_residual.png"><img src="content/budget_20/content/lpi/model_args.zero_init_residual.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">optim_args.amsgrad </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/lpi/optim_args.amsgrad.png" data-lightbox="content/budget_20/content/lpi/optim_args.amsgrad.png" data-title="content/budget_20/content/lpi/optim_args.amsgrad.png"><img src="content/budget_20/content/lpi/optim_args.amsgrad.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">optim_args.nesterov </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/lpi/optim_args.nesterov.png" data-lightbox="content/budget_20/content/lpi/optim_args.nesterov.png" data-title="content/budget_20/content/lpi/optim_args.nesterov.png"><img src="content/budget_20/content/lpi/optim_args.nesterov.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">optimizer </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/lpi/optimizer.png" data-lightbox="content/budget_20/content/lpi/optimizer.png" data-title="content/budget_20/content/lpi/optimizer.png"><img src="content/budget_20/content/lpi/optimizer.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">transforms </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/lpi/transforms.png" data-lightbox="content/budget_20/content/lpi/transforms.png" data-title="content/budget_20/content/lpi/transforms.png"><img src="content/budget_20/content/lpi/transforms.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div><div class="accordion">warmstart </div>
+<div class="panel">
+<div align="center">
+<a href="content/budget_20/content/lpi/warmstart.png" data-lightbox="content/budget_20/content/lpi/warmstart.png" data-title="content/budget_20/content/lpi/warmstart.png"><img src="content/budget_20/content/lpi/warmstart.png" alt="Plot missing - is phantomjs installed? Check CAVEs FAQ for infos." width="600px"></a>
+</div>
+</div></div>
+</div>
+<script> 
+// Get the element with id="defaultOpen53" and click on it 
+document.getElementById("defaultOpen53").click(); 
+</script> 
+</div></div>
+</div>
+<footer>
+    <div class='l-wrapper'>
+        Generated by <a href="https://github.com/automl/CAVE">CAVE v1.1.7</a> and developed by
+        <a href="http://www.automl.org">autoML</a> | Optimized for Chrome and Firefox
+    </div>
+</footer>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+</script>
+<script src="html/js/back-to-top.js"></script>
+</body>
+</html>

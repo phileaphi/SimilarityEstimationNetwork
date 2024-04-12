@@ -1,0 +1,26 @@
+{
+    "dataset": "MNIST",
+    "epochs": 100,
+    "batch_size": 200,
+    "warmstart": false,
+    "model": "OCRVAE",
+    "model_args": {},
+    "optimizer": "AdamW",
+    "optim_args": {
+        "lr": 1e-3,
+        "weight_decay": 0.138,
+        "nesterov": true,
+        "amsgrad": true
+    },
+    "loss_fn": "VAELoss",
+    "transforms": "OCR",
+    "transform_args": {
+        "resize_target": 64,
+        "elastic_coeffs": [
+            0.75,
+            0.4
+        ],
+        "degrees": 45.0,
+        "dist_scale": 0.1
+    }
+}

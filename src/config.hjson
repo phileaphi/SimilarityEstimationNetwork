@@ -1,0 +1,17 @@
+{
+  # Logging related stuff
+  log_level: 'DEBUG',
+  log_to_file: true,
+  profile_mem: false,
+  tensorboard_logging: true,
+  tensorboard_launch: false,
+
+  # SEEDS
+  np_random_seed: 42,
+  torch_manual_seed: 42,
+  torch_cuda_manual_seed_all: 42,
+
+  # CUDNN
+  cudnn_benchmark: true,
+  cudnn_deterministic: false 
+}

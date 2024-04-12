@@ -1,0 +1,30 @@
+name: automl
+dependencies:
+  - numpy
+  - rope
+  - pip
+  - pip:
+    - overrides
+    - requests
+    - argparse
+    - scipy
+    - sklearn
+    - nose
+    - tqdm
+    - matplotlib
+    - seaborn
+    - pandas
+    - liac-arff
+    - ConfigSpace
+    - smac
+    - torch
+    - torchvision
+    - torchsummary
+    # add your requirements below this line
+    - hjson
+    - tensorboardX
+    - yapf
+    - flake8
+    - isort
+    - hpbandster
+    - cave

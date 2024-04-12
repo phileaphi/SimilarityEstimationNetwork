@@ -1,0 +1,22 @@
+{
+    "batch_size": 96,
+    "autotune_lr": false,
+    "dataset": "K49",
+    "loss_fn": "CrossEntropyLoss",
+    "epochs": 10,
+    "model": "BaselineCNN",
+    "model_args": {
+        "n_layers": 1
+    },
+    "optim_args": {
+        "lr": 1e-2
+    },
+    "optimizer": "Adam",
+    "transform_args": {
+        "resize_target": 28
+    },
+    "transforms": "NONE",
+    "warmstart": false,
+    "neighbor_set": null,
+    "kfold": 5
+}

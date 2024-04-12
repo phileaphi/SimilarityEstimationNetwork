@@ -1,0 +1,63 @@
+{
+    "lpi": {
+        "imp": {
+            "batch_size": 0.08698223695691593,
+            "model": 0.008565773324846147,
+            "model_args.dropout": 0.001337513183949113,
+            "model_args.zero_init_residual": 0.0,
+            "optim_args.amsgrad": 0.0,
+            "optim_args.nesterov": 0.0,
+            "optim_args.weight_decay": 0.022344059323011287,
+            "optimizer": 0.8773284398436265,
+            "transforms": 0.0034419773676511592,
+            "warmstart": 0.0
+        },
+        "order": [
+            "optimizer",
+            "batch_size",
+            "optim_args.weight_decay",
+            "model",
+            "transforms",
+            "model_args.dropout",
+            "model_args.zero_init_residual",
+            "optim_args.amsgrad",
+            "optim_args.nesterov",
+            "warmstart"
+        ]
+    }
+}854715185,
+            "batch_size": 0.15234640815940093,
+            "model": 0.0013537033206409217,
+            "model_args.dropout": 0.003153964172107224,
+            "model_args.zero_init_residual": 0.007147833938283523,
+            "optim_args.amsgrad": 0.008459648860266596,
+            "optim_args.nesterov": 4.3921276902111715e-05,
+            "optim_args.weight_decay": 0.011682318689709212,
+            "optimizer": 0.709337340870425,
+            "transforms": 0.005489958183036733,
+            "warmstart": 0.00012909216028021773
+        },
+        "order": [
+            "optimizer",
+            "batch_size",
+            "optim_args.weight_decay",
+            "optim_args.amsgrad",
+            "model_args.zero_init_residual",
+            "transforms",
+            "model_args.dropout",
+            "model",
+            "warmstart",
+            "optim_args.nesterov",
+            "['optimizer', 'batch_size']",
+            "['optimizer', 'optim_args.weight_decay']",
+            "['optimizer', 'optim_args.amsgrad']",
+            "['optimizer', 'model_args.zero_init_residual']",
+            "['batch_size', 'optim_args.weight_decay']",
+            "['batch_size', 'optim_args.amsgrad']",
+            "['batch_size', 'model_args.zero_init_residual']",
+            "['optim_args.weight_decay', 'optim_args.amsgrad']",
+            "['optim_args.weight_decay', 'model_args.zero_init_residual']",
+            "['optim_args.amsgrad', 'model_args.zero_init_residual']"
+        ]
+    }
+}

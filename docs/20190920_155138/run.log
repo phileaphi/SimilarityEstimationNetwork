@@ -1,0 +1,731 @@
+2019-09-20 15:51:40,011 INFO resnet.py: Resnet: Finding best known checkpoint for KMNIST
+2019-09-20 15:51:43,344 WARNING resnet.py: Error(s) in loading state_dict for Resnet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([10, 512]) from checkpoint, the shape in current model is torch.Size([49, 512]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([10]) from checkpoint, the shape in current model is torch.Size([49]).
+2019-09-20 15:51:43,344 INFO resnet.py: Successfully loaded "KMNIST/Resnet_20190915-194138.pth"
+2019-09-20 15:51:43,356 INFO trainer.py: Generated Network:
+2019-09-20 15:51:43,512 INFO trainer.py: Input Shape: (1, 28, 28)
+2019-09-20 15:51:43,527 INFO trainer.py: Using 0 workers for dataloading
+2019-09-20 15:51:43,527 INFO trainer.py: Running Autotune LR
+2019-09-20 15:51:43,735 DEBUG trainer.py: Testing LR "0.0000e+00
+2019-09-20 15:51:45,626 DEBUG trainer.py: Testing LR "1.0000e-09
+2019-09-20 15:51:46,160 DEBUG trainer.py: Testing LR "1.0000e-08
+2019-09-20 15:51:46,691 DEBUG trainer.py: Testing LR "1.0000e-07
+2019-09-20 15:51:47,248 DEBUG trainer.py: Testing LR "1.0000e-06
+2019-09-20 15:51:47,807 DEBUG trainer.py: Testing LR "1.0000e-05
+2019-09-20 15:51:48,328 DEBUG trainer.py: Testing LR "1.0000e-04
+2019-09-20 15:51:48,863 DEBUG trainer.py: Testing LR "1.0000e-03
+2019-09-20 15:51:49,424 DEBUG trainer.py: Testing LR "1.0000e-02
+2019-09-20 15:51:49,953 DEBUG trainer.py: Testing LR "1.0000e-01
+2019-09-20 15:51:50,480 DEBUG trainer.py: Testing LR "1.0000e+00
+2019-09-20 15:51:51,026 DEBUG trainer.py: Testing LR "1.9000e-03
+2019-09-20 15:51:51,583 DEBUG trainer.py: Testing LR "2.8000e-03
+2019-09-20 15:51:52,129 DEBUG trainer.py: Testing LR "3.7000e-03
+2019-09-20 15:51:52,658 DEBUG trainer.py: Testing LR "4.6000e-03
+2019-09-20 15:51:53,210 DEBUG trainer.py: Testing LR "5.5000e-03
+2019-09-20 15:51:53,757 DEBUG trainer.py: Testing LR "6.4000e-03
+2019-09-20 15:51:54,279 DEBUG trainer.py: Testing LR "7.3000e-03
+2019-09-20 15:51:54,813 DEBUG trainer.py: Testing LR "8.2000e-03
+2019-09-20 15:51:55,385 DEBUG trainer.py: Testing LR "9.1000e-03
+2019-09-20 15:51:55,915 DEBUG trainer.py: Testing LR "1.9000e-02
+2019-09-20 15:51:56,442 DEBUG trainer.py: Testing LR "2.8000e-02
+2019-09-20 15:51:56,990 DEBUG trainer.py: Testing LR "3.7000e-02
+2019-09-20 15:51:57,540 DEBUG trainer.py: Testing LR "4.6000e-02
+2019-09-20 15:51:58,066 DEBUG trainer.py: Testing LR "5.5000e-02
+2019-09-20 15:51:58,596 DEBUG trainer.py: Testing LR "6.4000e-02
+2019-09-20 15:51:59,153 DEBUG trainer.py: Testing LR "7.3000e-02
+2019-09-20 15:51:59,692 DEBUG trainer.py: Testing LR "8.2000e-02
+2019-09-20 15:52:00,213 DEBUG trainer.py: Testing LR "9.1000e-02
+2019-09-20 15:52:00,745 DEBUG trainer.py: Testing LR "8.2900e-03
+2019-09-20 15:52:01,305 DEBUG trainer.py: Testing LR "8.3800e-03
+2019-09-20 15:52:01,835 DEBUG trainer.py: Testing LR "8.4700e-03
+2019-09-20 15:52:02,357 DEBUG trainer.py: Testing LR "8.5600e-03
+2019-09-20 15:52:02,906 DEBUG trainer.py: Testing LR "8.6500e-03
+2019-09-20 15:52:03,463 DEBUG trainer.py: Testing LR "8.7400e-03
+2019-09-20 15:52:03,991 DEBUG trainer.py: Testing LR "8.8300e-03
+2019-09-20 15:52:04,518 DEBUG trainer.py: Testing LR "8.9200e-03
+2019-09-20 15:52:05,074 DEBUG trainer.py: Testing LR "9.0100e-03
+2019-09-20 15:52:05,614 DEBUG trainer.py: Testing LR "1.0090e-02
+2019-09-20 15:52:06,140 DEBUG trainer.py: Testing LR "1.1080e-02
+2019-09-20 15:52:06,668 DEBUG trainer.py: Testing LR "1.2070e-02
+2019-09-20 15:52:07,221 DEBUG trainer.py: Testing LR "1.3060e-02
+2019-09-20 15:52:07,754 DEBUG trainer.py: Testing LR "1.4050e-02
+2019-09-20 15:52:08,274 DEBUG trainer.py: Testing LR "1.5040e-02
+2019-09-20 15:52:08,814 DEBUG trainer.py: Testing LR "1.6030e-02
+2019-09-20 15:52:09,378 DEBUG trainer.py: Testing LR "1.7020e-02
+2019-09-20 15:52:09,957 DEBUG trainer.py: Testing LR "1.8010e-02
+2019-09-20 15:52:11,802 DEBUG trainer.py:               LR        Loss
+35  8.830000e-03    3.620550
+32  8.560000e-03    3.631356
+36  8.920000e-03    3.644156
+38  1.009000e-02    3.647358
+19  9.100000e-03    3.649066
+18  8.200000e-03    3.653427
+31  8.470000e-03    3.655219
+30  8.380000e-03    3.656449
+37  9.010000e-03    3.661751
+29  8.290000e-03    3.667348
+39  1.108000e-02    3.667936
+40  1.207000e-02    3.670580
+34  8.740000e-03    3.671137
+8   1.000000e-02    3.676372
+17  7.300000e-03    3.678347
+33  8.650000e-03    3.692626
+41  1.306000e-02    3.699348
+16  6.400000e-03    3.717358
+42  1.405000e-02    3.724226
+43  1.504000e-02    3.736880
+15  5.500000e-03    3.740026
+14  4.600000e-03    3.769626
+44  1.603000e-02    3.784918
+13  3.700000e-03    3.816787
+45  1.702000e-02    3.865614
+12  2.800000e-03    3.871009
+46  1.801000e-02    3.882625
+11  1.900000e-03    3.904098
+20  1.900000e-02    3.955893
+7   1.000000e-03    3.985590
+6   1.000000e-04    4.030012
+4   1.000000e-06    4.041493
+3   1.000000e-07    4.058217
+5   1.000000e-05    4.071831
+1   1.000000e-09    4.081947
+2   1.000000e-08    4.091871
+0   0.000000e+00    4.114381
+21  2.800000e-02    4.574205
+22  3.700000e-02    5.216400
+23  4.600000e-02    5.904314
+24  5.500000e-02    6.521017
+25  6.400000e-02    7.191537
+26  7.300000e-02    7.795110
+27  8.200000e-02    8.501335
+28  9.100000e-02    9.289879
+9   1.000000e-01    9.940804
+10  1.000000e+00  107.910739
+2019-09-20 15:52:11,829 INFO trainer.py: Autotune LR finished. New LR is "8.830e-03" with train loss "3.620549661010059
+2019-09-20 15:52:11,845 INFO trainer.py: ##################################################
+2019-09-20 15:52:11,845 INFO trainer.py: Epoch [1/10]
+2019-09-20 15:53:31,377 INFO trainer.py: Train accuracy 83.695513
+2019-09-20 15:53:37,949 INFO trainer.py: Validation accuracy 95.690723
+2019-09-20 15:53:37,970 INFO trainer.py: ##################################################
+2019-09-20 15:53:37,970 INFO trainer.py: Epoch [2/10]
+2019-09-20 15:54:56,091 INFO trainer.py: Train accuracy 91.731055
+2019-09-20 15:55:02,524 INFO trainer.py: Validation accuracy 95.573092
+2019-09-20 15:55:02,532 INFO trainer.py: ##################################################
+2019-09-20 15:55:02,533 INFO trainer.py: Epoch [3/10]
+2019-09-20 15:56:21,463 INFO trainer.py: Train accuracy 93.230727
+2019-09-20 15:56:27,890 INFO trainer.py: Validation accuracy 96.933012
+2019-09-20 15:56:27,908 INFO trainer.py: ##################################################
+2019-09-20 15:56:27,908 INFO trainer.py: Epoch [4/10]
+2019-09-20 15:57:47,439 INFO trainer.py: Train accuracy 94.016510
+2019-09-20 15:57:53,932 INFO trainer.py: Validation accuracy 96.178458
+2019-09-20 15:57:53,940 INFO trainer.py: ##################################################
+2019-09-20 15:57:53,941 INFO trainer.py: Epoch [5/10]
+2019-09-20 15:59:14,030 INFO trainer.py: Train accuracy 94.881782
+2019-09-20 15:59:20,445 INFO trainer.py: Validation accuracy 97.004737
+2019-09-20 15:59:20,469 INFO trainer.py: ##################################################
+2019-09-20 15:59:20,470 INFO trainer.py: Epoch [6/10]
+2019-09-20 16:00:40,342 INFO trainer.py: Train accuracy 95.237714
+2019-09-20 16:00:46,789 INFO trainer.py: Validation accuracy 97.027690
+2019-09-20 16:00:46,808 INFO trainer.py: ##################################################
+2019-09-20 16:00:46,809 INFO trainer.py: Epoch [7/10]
+2019-09-20 16:02:06,810 INFO trainer.py: Train accuracy 95.686298
+2019-09-20 16:02:13,162 INFO trainer.py: Validation accuracy 97.191224
+2019-09-20 16:02:13,182 INFO trainer.py: ##################################################
+2019-09-20 16:02:13,182 INFO trainer.py: Epoch [8/10]
+2019-09-20 16:03:33,004 INFO trainer.py: Train accuracy 95.961221
+2019-09-20 16:03:39,425 INFO trainer.py: Validation accuracy 97.463782
+2019-09-20 16:03:39,447 INFO trainer.py: ##################################################
+2019-09-20 16:03:39,447 INFO trainer.py: Epoch [9/10]
+2019-09-20 16:04:59,266 INFO trainer.py: Train accuracy 96.319178
+2019-09-20 16:05:05,655 INFO trainer.py: Validation accuracy 97.377711
+2019-09-20 16:05:05,665 INFO trainer.py: ##################################################
+2019-09-20 16:05:05,666 INFO trainer.py: Epoch [10/10]
+2019-09-20 16:06:24,990 INFO trainer.py: Train accuracy 96.604226
+2019-09-20 16:06:31,381 INFO trainer.py: Validation accuracy 97.661745
+2019-09-20 16:06:53,946 INFO trainer.py: Test accuracy 95.724703
+2019-09-20 16:06:55,862 INFO resnet.py: Resnet: Finding best known checkpoint for EMNIST
+2019-09-20 16:06:55,916 WARNING resnet.py: Error(s) in loading state_dict for Resnet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([47, 512]) from checkpoint, the shape in current model is torch.Size([49, 512]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([47]) from checkpoint, the shape in current model is torch.Size([49]).
+2019-09-20 16:06:55,916 INFO resnet.py: Successfully loaded "EMNIST/Resnet_20190915-211937.pth"
+2019-09-20 16:06:55,927 INFO trainer.py: Generated Network:
+2019-09-20 16:06:55,960 INFO trainer.py: Input Shape: (1, 28, 28)
+2019-09-20 16:06:55,974 INFO trainer.py: Using 0 workers for dataloading
+2019-09-20 16:06:55,974 INFO trainer.py: Running Autotune LR
+2019-09-20 16:06:56,153 DEBUG trainer.py: Testing LR "0.0000e+00
+2019-09-20 16:06:56,694 DEBUG trainer.py: Testing LR "1.0000e-09
+2019-09-20 16:06:57,240 DEBUG trainer.py: Testing LR "1.0000e-08
+2019-09-20 16:06:57,814 DEBUG trainer.py: Testing LR "1.0000e-07
+2019-09-20 16:06:58,389 DEBUG trainer.py: Testing LR "1.0000e-06
+2019-09-20 16:06:58,978 DEBUG trainer.py: Testing LR "1.0000e-05
+2019-09-20 16:06:59,517 DEBUG trainer.py: Testing LR "1.0000e-04
+2019-09-20 16:07:00,088 DEBUG trainer.py: Testing LR "1.0000e-03
+2019-09-20 16:07:00,655 DEBUG trainer.py: Testing LR "1.0000e-02
+2019-09-20 16:07:01,186 DEBUG trainer.py: Testing LR "1.0000e-01
+2019-09-20 16:07:01,736 DEBUG trainer.py: Testing LR "1.0000e+00
+2019-09-20 16:07:02,277 DEBUG trainer.py: Testing LR "1.9000e-03
+2019-09-20 16:07:02,813 DEBUG trainer.py: Testing LR "2.8000e-03
+2019-09-20 16:07:03,341 DEBUG trainer.py: Testing LR "3.7000e-03
+2019-09-20 16:07:03,901 DEBUG trainer.py: Testing LR "4.6000e-03
+2019-09-20 16:07:04,462 DEBUG trainer.py: Testing LR "5.5000e-03
+2019-09-20 16:07:05,026 DEBUG trainer.py: Testing LR "6.4000e-03
+2019-09-20 16:07:05,596 DEBUG trainer.py: Testing LR "7.3000e-03
+2019-09-20 16:07:06,142 DEBUG trainer.py: Testing LR "8.2000e-03
+2019-09-20 16:07:06,674 DEBUG trainer.py: Testing LR "9.1000e-03
+2019-09-20 16:07:07,197 DEBUG trainer.py: Testing LR "1.9000e-02
+2019-09-20 16:07:07,750 DEBUG trainer.py: Testing LR "2.8000e-02
+2019-09-20 16:07:08,285 DEBUG trainer.py: Testing LR "3.7000e-02
+2019-09-20 16:07:08,813 DEBUG trainer.py: Testing LR "4.6000e-02
+2019-09-20 16:07:09,342 DEBUG trainer.py: Testing LR "5.5000e-02
+2019-09-20 16:07:09,898 DEBUG trainer.py: Testing LR "6.4000e-02
+2019-09-20 16:07:10,428 DEBUG trainer.py: Testing LR "7.3000e-02
+2019-09-20 16:07:10,958 DEBUG trainer.py: Testing LR "8.2000e-02
+2019-09-20 16:07:11,498 DEBUG trainer.py: Testing LR "9.1000e-02
+2019-09-20 16:07:12,052 DEBUG trainer.py: Testing LR "1.9000e-03
+2019-09-20 16:07:12,582 DEBUG trainer.py: Testing LR "2.8000e-03
+2019-09-20 16:07:13,105 DEBUG trainer.py: Testing LR "3.7000e-03
+2019-09-20 16:07:13,650 DEBUG trainer.py: Testing LR "4.6000e-03
+2019-09-20 16:07:14,188 DEBUG trainer.py: Testing LR "5.5000e-03
+2019-09-20 16:07:14,715 DEBUG trainer.py: Testing LR "6.4000e-03
+2019-09-20 16:07:15,240 DEBUG trainer.py: Testing LR "7.3000e-03
+2019-09-20 16:07:15,792 DEBUG trainer.py: Testing LR "8.2000e-03
+2019-09-20 16:07:16,321 DEBUG trainer.py: Testing LR "9.1000e-03
+2019-09-20 16:07:16,848 DEBUG trainer.py: Testing LR "1.9000e-02
+2019-09-20 16:07:17,383 DEBUG trainer.py: Testing LR "2.8000e-02
+2019-09-20 16:07:17,934 DEBUG trainer.py: Testing LR "3.7000e-02
+2019-09-20 16:07:18,460 DEBUG trainer.py: Testing LR "4.6000e-02
+2019-09-20 16:07:18,984 DEBUG trainer.py: Testing LR "5.5000e-02
+2019-09-20 16:07:19,526 DEBUG trainer.py: Testing LR "6.4000e-02
+2019-09-20 16:07:20,070 DEBUG trainer.py: Testing LR "7.3000e-02
+2019-09-20 16:07:20,599 DEBUG trainer.py: Testing LR "8.2000e-02
+2019-09-20 16:07:21,135 DEBUG trainer.py: Testing LR "9.1000e-02
+2019-09-20 16:07:22,084 DEBUG trainer.py:               LR        Loss
+36  8.200000e-03    3.646787
+8   1.000000e-02    3.655694
+35  7.300000e-03    3.671014
+34  6.400000e-03    3.683871
+37  9.100000e-03    3.692794
+18  8.200000e-03    3.693006
+16  6.400000e-03    3.696828
+17  7.300000e-03    3.697189
+33  5.500000e-03    3.729371
+15  5.500000e-03    3.737046
+19  9.100000e-03    3.747034
+32  4.600000e-03    3.751269
+14  4.600000e-03    3.783024
+31  3.700000e-03    3.814707
+13  3.700000e-03    3.836789
+12  2.800000e-03    3.848828
+30  2.800000e-03    3.855758
+11  1.900000e-03    3.910721
+29  1.900000e-03    3.916334
+38  1.900000e-02    4.004142
+7   1.000000e-03    4.009248
+20  1.900000e-02    4.055687
+0   0.000000e+00    4.091758
+6   1.000000e-04    4.100562
+2   1.000000e-08    4.100963
+1   1.000000e-09    4.103668
+3   1.000000e-07    4.113026
+5   1.000000e-05    4.116688
+4   1.000000e-06    4.126610
+39  2.800000e-02    4.657189
+21  2.800000e-02    4.689163
+22  3.700000e-02    5.235582
+40  3.700000e-02    5.334184
+23  4.600000e-02    5.998886
+41  4.600000e-02    6.019800
+24  5.500000e-02    6.535644
+42  5.500000e-02    6.600313
+25  6.400000e-02    7.184311
+43  6.400000e-02    7.436042
+26  7.300000e-02    7.880206
+44  7.300000e-02    8.053434
+27  8.200000e-02    8.569785
+45  8.200000e-02    8.641059
+28  9.100000e-02    9.334398
+46  9.100000e-02    9.344454
+9   1.000000e-01   10.125661
+10  1.000000e+00  105.686887
+2019-09-20 16:07:22,132 INFO trainer.py: Autotune LR finished. New LR is "8.200e-03" with train loss "3.646786623105116
+2019-09-20 16:07:22,146 INFO trainer.py: ##################################################
+2019-09-20 16:07:22,146 INFO trainer.py: Epoch [1/10]
+2019-09-20 16:08:39,059 INFO trainer.py: Train accuracy 83.187184
+2019-09-20 16:08:45,395 INFO trainer.py: Validation accuracy 93.034002
+2019-09-20 16:08:45,416 INFO trainer.py: ##################################################
+2019-09-20 16:08:45,417 INFO trainer.py: Epoch [2/10]
+2019-09-20 16:10:02,935 INFO trainer.py: Train accuracy 91.624226
+2019-09-20 16:10:09,393 INFO trainer.py: Validation accuracy 95.202988
+2019-09-20 16:10:09,413 INFO trainer.py: ##################################################
+2019-09-20 16:10:09,414 INFO trainer.py: Epoch [3/10]
+2019-09-20 16:11:27,806 INFO trainer.py: Train accuracy 93.068709
+2019-09-20 16:11:34,276 INFO trainer.py: Validation accuracy 96.347730
+2019-09-20 16:11:34,291 INFO trainer.py: ##################################################
+2019-09-20 16:11:34,291 INFO trainer.py: Epoch [4/10]
+2019-09-20 16:12:53,591 INFO trainer.py: Train accuracy 94.057014
+2019-09-20 16:12:59,992 INFO trainer.py: Validation accuracy 96.582991
+2019-09-20 16:13:00,010 INFO trainer.py: ##################################################
+2019-09-20 16:13:00,010 INFO trainer.py: Epoch [5/10]
+2019-09-20 16:14:19,467 INFO trainer.py: Train accuracy 94.835709
+2019-09-20 16:14:25,922 INFO trainer.py: Validation accuracy 96.448146
+2019-09-20 16:14:25,929 INFO trainer.py: ##################################################
+2019-09-20 16:14:25,929 INFO trainer.py: Epoch [6/10]
+2019-09-20 16:15:45,347 INFO trainer.py: Train accuracy 95.289863
+2019-09-20 16:15:51,747 INFO trainer.py: Validation accuracy 96.611681
+2019-09-20 16:15:51,764 INFO trainer.py: ##################################################
+2019-09-20 16:15:51,765 INFO trainer.py: Epoch [7/10]
+2019-09-20 16:17:11,348 INFO trainer.py: Train accuracy 95.604783
+2019-09-20 16:17:17,854 INFO trainer.py: Validation accuracy 96.990393
+2019-09-20 16:17:17,874 INFO trainer.py: ##################################################
+2019-09-20 16:17:17,874 INFO trainer.py: Epoch [8/10]
+2019-09-20 16:18:37,671 INFO trainer.py: Train accuracy 96.066532
+2019-09-20 16:18:44,055 INFO trainer.py: Validation accuracy 97.239998
+2019-09-20 16:18:44,072 INFO trainer.py: ##################################################
+2019-09-20 16:18:44,072 INFO trainer.py: Epoch [9/10]
+2019-09-20 16:20:02,030 INFO trainer.py: Train accuracy 96.211841
+2019-09-20 16:20:07,862 INFO trainer.py: Validation accuracy 97.340414
+2019-09-20 16:20:07,881 INFO trainer.py: ##################################################
+2019-09-20 16:20:07,881 INFO trainer.py: Epoch [10/10]
+2019-09-20 16:21:22,790 INFO trainer.py: Train accuracy 96.491827
+2019-09-20 16:21:28,623 INFO trainer.py: Validation accuracy 97.512556
+2019-09-20 16:21:39,481 INFO trainer.py: Test accuracy 95.859604
+2019-09-20 16:21:39,695 INFO resnet.py: Resnet: Finding best known checkpoint for QMNIST
+2019-09-20 16:21:39,739 WARNING resnet.py: Error(s) in loading state_dict for Resnet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([10, 512]) from checkpoint, the shape in current model is torch.Size([49, 512]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([10]) from checkpoint, the shape in current model is torch.Size([49]).
+2019-09-20 16:21:39,740 INFO resnet.py: Successfully loaded "QMNIST/Resnet_20190916-020423.pth"
+2019-09-20 16:21:39,749 INFO trainer.py: Generated Network:
+2019-09-20 16:21:39,782 INFO trainer.py: Input Shape: (1, 28, 28)
+2019-09-20 16:21:39,792 INFO trainer.py: Using 0 workers for dataloading
+2019-09-20 16:21:39,793 INFO trainer.py: Running Autotune LR
+2019-09-20 16:21:39,957 DEBUG trainer.py: Testing LR "0.0000e+00
+2019-09-20 16:21:40,490 DEBUG trainer.py: Testing LR "1.0000e-09
+2019-09-20 16:21:41,014 DEBUG trainer.py: Testing LR "1.0000e-08
+2019-09-20 16:21:41,534 DEBUG trainer.py: Testing LR "1.0000e-07
+2019-09-20 16:21:42,081 DEBUG trainer.py: Testing LR "1.0000e-06
+2019-09-20 16:21:42,611 DEBUG trainer.py: Testing LR "1.0000e-05
+2019-09-20 16:21:43,132 DEBUG trainer.py: Testing LR "1.0000e-04
+2019-09-20 16:21:43,663 DEBUG trainer.py: Testing LR "1.0000e-03
+2019-09-20 16:21:44,203 DEBUG trainer.py: Testing LR "1.0000e-02
+2019-09-20 16:21:44,740 DEBUG trainer.py: Testing LR "1.0000e-01
+2019-09-20 16:21:45,259 DEBUG trainer.py: Testing LR "1.0000e+00
+2019-09-20 16:21:45,798 DEBUG trainer.py: Testing LR "1.9000e-03
+2019-09-20 16:21:46,335 DEBUG trainer.py: Testing LR "2.8000e-03
+2019-09-20 16:21:46,860 DEBUG trainer.py: Testing LR "3.7000e-03
+2019-09-20 16:21:47,385 DEBUG trainer.py: Testing LR "4.6000e-03
+2019-09-20 16:21:47,935 DEBUG trainer.py: Testing LR "5.5000e-03
+2019-09-20 16:21:48,468 DEBUG trainer.py: Testing LR "6.4000e-03
+2019-09-20 16:21:48,988 DEBUG trainer.py: Testing LR "7.3000e-03
+2019-09-20 16:21:49,521 DEBUG trainer.py: Testing LR "8.2000e-03
+2019-09-20 16:21:50,068 DEBUG trainer.py: Testing LR "9.1000e-03
+2019-09-20 16:21:50,594 DEBUG trainer.py: Testing LR "1.9000e-02
+2019-09-20 16:21:51,112 DEBUG trainer.py: Testing LR "2.8000e-02
+2019-09-20 16:21:51,643 DEBUG trainer.py: Testing LR "3.7000e-02
+2019-09-20 16:21:52,179 DEBUG trainer.py: Testing LR "4.6000e-02
+2019-09-20 16:21:52,703 DEBUG trainer.py: Testing LR "5.5000e-02
+2019-09-20 16:21:53,221 DEBUG trainer.py: Testing LR "6.4000e-02
+2019-09-20 16:21:53,764 DEBUG trainer.py: Testing LR "7.3000e-02
+2019-09-20 16:21:54,297 DEBUG trainer.py: Testing LR "8.2000e-02
+2019-09-20 16:21:54,817 DEBUG trainer.py: Testing LR "9.1000e-02
+2019-09-20 16:21:55,337 DEBUG trainer.py: Testing LR "5.5900e-03
+2019-09-20 16:21:55,881 DEBUG trainer.py: Testing LR "5.6800e-03
+2019-09-20 16:21:56,415 DEBUG trainer.py: Testing LR "5.7700e-03
+2019-09-20 16:21:56,937 DEBUG trainer.py: Testing LR "5.8600e-03
+2019-09-20 16:21:57,463 DEBUG trainer.py: Testing LR "5.9500e-03
+2019-09-20 16:21:58,012 DEBUG trainer.py: Testing LR "6.0400e-03
+2019-09-20 16:21:58,536 DEBUG trainer.py: Testing LR "6.1300e-03
+2019-09-20 16:21:59,057 DEBUG trainer.py: Testing LR "6.2200e-03
+2019-09-20 16:21:59,593 DEBUG trainer.py: Testing LR "6.3100e-03
+2019-09-20 16:22:00,134 DEBUG trainer.py: Testing LR "6.4900e-03
+2019-09-20 16:22:00,663 DEBUG trainer.py: Testing LR "6.5800e-03
+2019-09-20 16:22:01,182 DEBUG trainer.py: Testing LR "6.6700e-03
+2019-09-20 16:22:01,716 DEBUG trainer.py: Testing LR "6.7600e-03
+2019-09-20 16:22:02,254 DEBUG trainer.py: Testing LR "6.8500e-03
+2019-09-20 16:22:02,777 DEBUG trainer.py: Testing LR "6.9400e-03
+2019-09-20 16:22:03,297 DEBUG trainer.py: Testing LR "7.0300e-03
+2019-09-20 16:22:03,842 DEBUG trainer.py: Testing LR "7.1200e-03
+2019-09-20 16:22:04,374 DEBUG trainer.py: Testing LR "7.2100e-03
+2019-09-20 16:22:05,234 DEBUG trainer.py:               LR        Loss
+45  7.120000e-03    3.817306
+16  6.400000e-03    3.823802
+15  5.500000e-03    3.827512
+32  5.860000e-03    3.828553
+37  6.310000e-03    3.835272
+42  6.850000e-03    3.836998
+44  7.030000e-03    3.838984
+36  6.220000e-03    3.840249
+41  6.760000e-03    3.842778
+17  7.300000e-03    3.843226
+46  7.210000e-03    3.847590
+39  6.580000e-03    3.850026
+35  6.130000e-03    3.851632
+8   1.000000e-02    3.851884
+40  6.670000e-03    3.852531
+30  5.680000e-03    3.853667
+14  4.600000e-03    3.860201
+31  5.770000e-03    3.861071
+33  5.950000e-03    3.862934
+34  6.040000e-03    3.863735
+43  6.940000e-03    3.864015
+18  8.200000e-03    3.864179
+29  5.590000e-03    3.864242
+19  9.100000e-03    3.865954
+38  6.490000e-03    3.878046
+13  3.700000e-03    3.884310
+12  2.800000e-03    3.915394
+11  1.900000e-03    3.976906
+7   1.000000e-03    4.003878
+5   1.000000e-05    4.042952
+3   1.000000e-07    4.057822
+4   1.000000e-06    4.058021
+0   0.000000e+00    4.064430
+6   1.000000e-04    4.065803
+2   1.000000e-08    4.066168
+1   1.000000e-09    4.067328
+20  1.900000e-02    4.098651
+21  2.800000e-02    4.553325
+22  3.700000e-02    5.226702
+23  4.600000e-02    5.862005
+24  5.500000e-02    6.399223
+25  6.400000e-02    7.162962
+26  7.300000e-02    7.833768
+27  8.200000e-02    8.555059
+28  9.100000e-02    9.182339
+9   1.000000e-01    9.906553
+10  1.000000e+00  115.017153
+2019-09-20 16:22:05,259 INFO trainer.py: Autotune LR finished. New LR is "7.120e-03" with train loss "3.817306424254802
+2019-09-20 16:22:05,272 INFO trainer.py: ##################################################
+2019-09-20 16:22:05,273 INFO trainer.py: Epoch [1/10]
+2019-09-20 16:23:19,821 INFO trainer.py: Train accuracy 82.862137
+2019-09-20 16:23:25,722 INFO trainer.py: Validation accuracy 94.018079
+2019-09-20 16:23:25,739 INFO trainer.py: ##################################################
+2019-09-20 16:23:25,740 INFO trainer.py: Epoch [2/10]
+2019-09-20 16:24:40,123 INFO trainer.py: Train accuracy 91.770547
+2019-09-20 16:24:46,008 INFO trainer.py: Validation accuracy 95.762448
+2019-09-20 16:24:46,025 INFO trainer.py: ##################################################
+2019-09-20 16:24:46,025 INFO trainer.py: Epoch [3/10]
+2019-09-20 16:26:00,678 INFO trainer.py: Train accuracy 93.435273
+2019-09-20 16:26:06,564 INFO trainer.py: Validation accuracy 96.359206
+2019-09-20 16:26:06,578 INFO trainer.py: ##################################################
+2019-09-20 16:26:06,578 INFO trainer.py: Epoch [4/10]
+2019-09-20 16:27:22,418 INFO trainer.py: Train accuracy 94.357252
+2019-09-20 16:27:28,305 INFO trainer.py: Validation accuracy 96.626026
+2019-09-20 16:27:28,321 INFO trainer.py: ##################################################
+2019-09-20 16:27:28,322 INFO trainer.py: Epoch [5/10]
+2019-09-20 16:28:43,073 INFO trainer.py: Train accuracy 94.858998
+2019-09-20 16:28:49,328 INFO trainer.py: Validation accuracy 96.654716
+2019-09-20 16:28:49,342 INFO trainer.py: ##################################################
+2019-09-20 16:28:49,342 INFO trainer.py: Epoch [6/10]
+2019-09-20 16:30:04,009 INFO trainer.py: Train accuracy 95.403275
+2019-09-20 16:30:09,872 INFO trainer.py: Validation accuracy 96.826858
+2019-09-20 16:30:09,888 INFO trainer.py: ##################################################
+2019-09-20 16:30:09,888 INFO trainer.py: Epoch [7/10]
+2019-09-20 16:31:24,301 INFO trainer.py: Train accuracy 95.726803
+2019-09-20 16:31:30,148 INFO trainer.py: Validation accuracy 96.904321
+2019-09-20 16:31:30,163 INFO trainer.py: ##################################################
+2019-09-20 16:31:30,163 INFO trainer.py: Epoch [8/10]
+2019-09-20 16:32:45,446 INFO trainer.py: Train accuracy 96.112099
+2019-09-20 16:32:51,370 INFO trainer.py: Validation accuracy 97.079333
+2019-09-20 16:32:51,398 INFO trainer.py: ##################################################
+2019-09-20 16:32:51,399 INFO trainer.py: Epoch [9/10]
+2019-09-20 16:34:06,328 INFO trainer.py: Train accuracy 96.293356
+2019-09-20 16:34:12,239 INFO trainer.py: Validation accuracy 97.245736
+2019-09-20 16:34:12,258 INFO trainer.py: ##################################################
+2019-09-20 16:34:12,259 INFO trainer.py: Epoch [10/10]
+2019-09-20 16:35:30,254 INFO trainer.py: Train accuracy 96.580430
+2019-09-20 16:35:36,660 INFO trainer.py: Validation accuracy 97.050642
+2019-09-20 16:35:43,742 INFO trainer.py: Test accuracy 95.182509
+2019-09-20 16:35:43,971 INFO resnet.py: Resnet: Finding best known checkpoint for MNIST
+2019-09-20 16:35:44,020 WARNING resnet.py: Error(s) in loading state_dict for Resnet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([10, 512]) from checkpoint, the shape in current model is torch.Size([49, 512]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([10]) from checkpoint, the shape in current model is torch.Size([49]).
+2019-09-20 16:35:44,020 INFO resnet.py: Successfully loaded "MNIST/Resnet_20190916-035848.pth"
+2019-09-20 16:35:44,031 INFO trainer.py: Generated Network:
+2019-09-20 16:35:44,065 INFO trainer.py: Input Shape: (1, 28, 28)
+2019-09-20 16:35:44,083 INFO trainer.py: Using 0 workers for dataloading
+2019-09-20 16:35:44,084 INFO trainer.py: Running Autotune LR
+2019-09-20 16:35:44,248 DEBUG trainer.py: Testing LR "0.0000e+00
+2019-09-20 16:35:44,779 DEBUG trainer.py: Testing LR "1.0000e-09
+2019-09-20 16:35:45,303 DEBUG trainer.py: Testing LR "1.0000e-08
+2019-09-20 16:35:45,850 DEBUG trainer.py: Testing LR "1.0000e-07
+2019-09-20 16:35:46,401 DEBUG trainer.py: Testing LR "1.0000e-06
+2019-09-20 16:35:46,929 DEBUG trainer.py: Testing LR "1.0000e-05
+2019-09-20 16:35:47,461 DEBUG trainer.py: Testing LR "1.0000e-04
+2019-09-20 16:35:48,015 DEBUG trainer.py: Testing LR "1.0000e-03
+2019-09-20 16:35:48,553 DEBUG trainer.py: Testing LR "1.0000e-02
+2019-09-20 16:35:49,080 DEBUG trainer.py: Testing LR "1.0000e-01
+2019-09-20 16:35:49,614 DEBUG trainer.py: Testing LR "1.0000e+00
+2019-09-20 16:35:50,169 DEBUG trainer.py: Testing LR "1.9000e-03
+2019-09-20 16:35:50,700 DEBUG trainer.py: Testing LR "2.8000e-03
+2019-09-20 16:35:51,222 DEBUG trainer.py: Testing LR "3.7000e-03
+2019-09-20 16:35:51,765 DEBUG trainer.py: Testing LR "4.6000e-03
+2019-09-20 16:35:52,314 DEBUG trainer.py: Testing LR "5.5000e-03
+2019-09-20 16:35:52,853 DEBUG trainer.py: Testing LR "6.4000e-03
+2019-09-20 16:35:53,380 DEBUG trainer.py: Testing LR "7.3000e-03
+2019-09-20 16:35:53,948 DEBUG trainer.py: Testing LR "8.2000e-03
+2019-09-20 16:35:54,507 DEBUG trainer.py: Testing LR "9.1000e-03
+2019-09-20 16:35:55,034 DEBUG trainer.py: Testing LR "1.9000e-02
+2019-09-20 16:35:55,564 DEBUG trainer.py: Testing LR "2.8000e-02
+2019-09-20 16:35:56,116 DEBUG trainer.py: Testing LR "3.7000e-02
+2019-09-20 16:35:56,650 DEBUG trainer.py: Testing LR "4.6000e-02
+2019-09-20 16:35:57,172 DEBUG trainer.py: Testing LR "5.5000e-02
+2019-09-20 16:35:57,712 DEBUG trainer.py: Testing LR "6.4000e-02
+2019-09-20 16:35:58,264 DEBUG trainer.py: Testing LR "7.3000e-02
+2019-09-20 16:35:58,792 DEBUG trainer.py: Testing LR "8.2000e-02
+2019-09-20 16:35:59,317 DEBUG trainer.py: Testing LR "9.1000e-02
+2019-09-20 16:35:59,868 DEBUG trainer.py: Testing LR "7.3900e-03
+2019-09-20 16:36:00,421 DEBUG trainer.py: Testing LR "7.4800e-03
+2019-09-20 16:36:00,950 DEBUG trainer.py: Testing LR "7.5700e-03
+2019-09-20 16:36:01,477 DEBUG trainer.py: Testing LR "7.6600e-03
+2019-09-20 16:36:02,037 DEBUG trainer.py: Testing LR "7.7500e-03
+2019-09-20 16:36:02,572 DEBUG trainer.py: Testing LR "7.8400e-03
+2019-09-20 16:36:03,094 DEBUG trainer.py: Testing LR "7.9300e-03
+2019-09-20 16:36:03,633 DEBUG trainer.py: Testing LR "8.0200e-03
+2019-09-20 16:36:04,194 DEBUG trainer.py: Testing LR "8.1100e-03
+2019-09-20 16:36:04,722 DEBUG trainer.py: Testing LR "8.2900e-03
+2019-09-20 16:36:05,245 DEBUG trainer.py: Testing LR "8.3800e-03
+2019-09-20 16:36:05,794 DEBUG trainer.py: Testing LR "8.4700e-03
+2019-09-20 16:36:06,338 DEBUG trainer.py: Testing LR "8.5600e-03
+2019-09-20 16:36:06,863 DEBUG trainer.py: Testing LR "8.6500e-03
+2019-09-20 16:36:07,391 DEBUG trainer.py: Testing LR "8.7400e-03
+2019-09-20 16:36:07,967 DEBUG trainer.py: Testing LR "8.8300e-03
+2019-09-20 16:36:08,504 DEBUG trainer.py: Testing LR "8.9200e-03
+2019-09-20 16:36:09,031 DEBUG trainer.py: Testing LR "9.0100e-03
+2019-09-20 16:36:09,918 DEBUG trainer.py:               LR        Loss
+35  7.930000e-03    3.811789
+38  8.290000e-03    3.820886
+44  8.830000e-03    3.825227
+39  8.380000e-03    3.828537
+40  8.470000e-03    3.828758
+33  7.750000e-03    3.830117
+36  8.020000e-03    3.836001
+41  8.560000e-03    3.836110
+32  7.660000e-03    3.837078
+18  8.200000e-03    3.841707
+45  8.920000e-03    3.844849
+29  7.390000e-03    3.844912
+37  8.110000e-03    3.848670
+8   1.000000e-02    3.850978
+42  8.650000e-03    3.851528
+31  7.570000e-03    3.852064
+34  7.840000e-03    3.852262
+43  8.740000e-03    3.853563
+15  5.500000e-03    3.854416
+19  9.100000e-03    3.860255
+30  7.480000e-03    3.861465
+46  9.010000e-03    3.861626
+17  7.300000e-03    3.870421
+16  6.400000e-03    3.876698
+14  4.600000e-03    3.884379
+13  3.700000e-03    3.905820
+11  1.900000e-03    3.966811
+12  2.800000e-03    3.977495
+7   1.000000e-03    3.988351
+0   0.000000e+00    4.056880
+2   1.000000e-08    4.059062
+5   1.000000e-05    4.066016
+6   1.000000e-04    4.075886
+4   1.000000e-06    4.088978
+3   1.000000e-07    4.094969
+1   1.000000e-09    4.106323
+20  1.900000e-02    4.113378
+21  2.800000e-02    4.614993
+22  3.700000e-02    5.170072
+23  4.600000e-02    5.749565
+24  5.500000e-02    6.411016
+25  6.400000e-02    7.194000
+26  7.300000e-02    7.797692
+27  8.200000e-02    8.501476
+28  9.100000e-02    9.308554
+9   1.000000e-01    9.775210
+10  1.000000e+00  105.159512
+2019-09-20 16:36:09,944 INFO trainer.py: Autotune LR finished. New LR is "7.930e-03" with train loss "3.8117886287610374
+2019-09-20 16:36:09,959 INFO trainer.py: ##################################################
+2019-09-20 16:36:09,959 INFO trainer.py: Epoch [1/10]
+2019-09-20 16:37:27,400 INFO trainer.py: Train accuracy 82.241915
+2019-09-20 16:37:33,809 INFO trainer.py: Validation accuracy 94.471386
+2019-09-20 16:37:33,823 INFO trainer.py: ##################################################
+2019-09-20 16:37:33,824 INFO trainer.py: Epoch [2/10]
+2019-09-20 16:38:51,988 INFO trainer.py: Train accuracy 91.500181
+2019-09-20 16:38:58,409 INFO trainer.py: Validation accuracy 96.135422
+2019-09-20 16:38:58,433 INFO trainer.py: ##################################################
+2019-09-20 16:38:58,434 INFO trainer.py: Epoch [3/10]
+2019-09-20 16:40:17,545 INFO trainer.py: Train accuracy 93.150224
+2019-09-20 16:40:23,984 INFO trainer.py: Validation accuracy 96.491181
+2019-09-20 16:40:24,001 INFO trainer.py: ##################################################
+2019-09-20 16:40:24,002 INFO trainer.py: Epoch [4/10]
+2019-09-20 16:41:43,689 INFO trainer.py: Train accuracy 94.039293
+2019-09-20 16:41:50,116 INFO trainer.py: Validation accuracy 96.098125
+2019-09-20 16:41:50,126 INFO trainer.py: ##################################################
+2019-09-20 16:41:50,126 INFO trainer.py: Epoch [5/10]
+2019-09-20 16:43:09,638 INFO trainer.py: Train accuracy 94.753181
+2019-09-20 16:43:16,172 INFO trainer.py: Validation accuracy 96.935881
+2019-09-20 16:43:16,187 INFO trainer.py: ##################################################
+2019-09-20 16:43:16,187 INFO trainer.py: Epoch [6/10]
+2019-09-20 16:44:35,872 INFO trainer.py: Train accuracy 95.138478
+2019-09-20 16:44:42,353 INFO trainer.py: Validation accuracy 97.128106
+2019-09-20 16:44:42,385 INFO trainer.py: ##################################################
+2019-09-20 16:44:42,392 INFO trainer.py: Epoch [7/10]
+2019-09-20 16:46:02,385 INFO trainer.py: Train accuracy 95.738448
+2019-09-20 16:46:08,827 INFO trainer.py: Validation accuracy 96.955964
+2019-09-20 16:46:08,836 INFO trainer.py: ##################################################
+2019-09-20 16:46:08,837 INFO trainer.py: Epoch [8/10]
+2019-09-20 16:47:28,917 INFO trainer.py: Train accuracy 95.900971
+2019-09-20 16:47:35,479 INFO trainer.py: Validation accuracy 97.085070
+2019-09-20 16:47:35,489 INFO trainer.py: ##################################################
+2019-09-20 16:47:35,490 INFO trainer.py: Epoch [9/10]
+2019-09-20 16:48:58,276 INFO trainer.py: Train accuracy 96.172856
+2019-09-20 16:49:04,702 INFO trainer.py: Validation accuracy 97.162534
+2019-09-20 16:49:04,718 INFO trainer.py: ##################################################
+2019-09-20 16:49:04,718 INFO trainer.py: Epoch [10/10]
+2019-09-20 16:50:29,535 INFO trainer.py: Train accuracy 96.557646
+2019-09-20 16:50:36,278 INFO trainer.py: Validation accuracy 97.148189
+2019-09-20 16:50:44,043 INFO trainer.py: Test accuracy 95.156566
+2019-09-20 16:50:44,292 INFO resnet.py: Resnet: Finding best known checkpoint for Omniglot
+2019-09-20 16:50:44,318 WARNING resnet.py: Error(s) in loading state_dict for Resnet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([1623, 512]) from checkpoint, the shape in current model is torch.Size([49, 512]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([1623]) from checkpoint, the shape in current model is torch.Size([49]).
+2019-09-20 16:50:44,318 INFO resnet.py: Successfully loaded "Omniglot/Resnet_20190916-054736.pth"
+2019-09-20 16:50:44,331 INFO trainer.py: Generated Network:
+2019-09-20 16:50:44,365 INFO trainer.py: Input Shape: (1, 28, 28)
+2019-09-20 16:50:44,397 INFO trainer.py: Using 0 workers for dataloading
+2019-09-20 16:50:44,398 INFO trainer.py: Running Autotune LR
+2019-09-20 16:50:44,601 DEBUG trainer.py: Testing LR "0.0000e+00
+2019-09-20 16:50:45,175 DEBUG trainer.py: Testing LR "1.0000e-09
+2019-09-20 16:50:45,812 DEBUG trainer.py: Testing LR "1.0000e-08
+2019-09-20 16:50:46,399 DEBUG trainer.py: Testing LR "1.0000e-07
+2019-09-20 16:50:46,997 DEBUG trainer.py: Testing LR "1.0000e-06
+2019-09-20 16:50:47,561 DEBUG trainer.py: Testing LR "1.0000e-05
+2019-09-20 16:50:48,133 DEBUG trainer.py: Testing LR "1.0000e-04
+2019-09-20 16:50:48,753 DEBUG trainer.py: Testing LR "1.0000e-03
+2019-09-20 16:50:49,317 DEBUG trainer.py: Testing LR "1.0000e-02
+2019-09-20 16:50:49,915 DEBUG trainer.py: Testing LR "1.0000e-01
+2019-09-20 16:50:50,523 DEBUG trainer.py: Testing LR "1.0000e+00
+2019-09-20 16:50:51,073 DEBUG trainer.py: Testing LR "1.9000e-04
+2019-09-20 16:50:51,623 DEBUG trainer.py: Testing LR "2.8000e-04
+2019-09-20 16:50:52,189 DEBUG trainer.py: Testing LR "3.7000e-04
+2019-09-20 16:50:52,748 DEBUG trainer.py: Testing LR "4.6000e-04
+2019-09-20 16:50:53,278 DEBUG trainer.py: Testing LR "5.5000e-04
+2019-09-20 16:50:53,908 DEBUG trainer.py: Testing LR "6.4000e-04
+2019-09-20 16:50:54,581 DEBUG trainer.py: Testing LR "7.3000e-04
+2019-09-20 16:50:55,192 DEBUG trainer.py: Testing LR "8.2000e-04
+2019-09-20 16:50:55,756 DEBUG trainer.py: Testing LR "9.1000e-04
+2019-09-20 16:50:56,334 DEBUG trainer.py: Testing LR "1.9000e-03
+2019-09-20 16:50:56,882 DEBUG trainer.py: Testing LR "2.8000e-03
+2019-09-20 16:50:57,418 DEBUG trainer.py: Testing LR "3.7000e-03
+2019-09-20 16:50:57,965 DEBUG trainer.py: Testing LR "4.6000e-03
+2019-09-20 16:50:58,528 DEBUG trainer.py: Testing LR "5.5000e-03
+2019-09-20 16:50:59,055 DEBUG trainer.py: Testing LR "6.4000e-03
+2019-09-20 16:50:59,597 DEBUG trainer.py: Testing LR "7.3000e-03
+2019-09-20 16:51:00,198 DEBUG trainer.py: Testing LR "8.2000e-03
+2019-09-20 16:51:00,743 DEBUG trainer.py: Testing LR "9.1000e-03
+2019-09-20 16:51:01,272 DEBUG trainer.py: Testing LR "1.0090e-03
+2019-09-20 16:51:01,813 DEBUG trainer.py: Testing LR "1.1080e-03
+2019-09-20 16:51:02,367 DEBUG trainer.py: Testing LR "1.2070e-03
+2019-09-20 16:51:02,904 DEBUG trainer.py: Testing LR "1.3060e-03
+2019-09-20 16:51:03,437 DEBUG trainer.py: Testing LR "1.4050e-03
+2019-09-20 16:51:03,999 DEBUG trainer.py: Testing LR "1.5040e-03
+2019-09-20 16:51:04,608 DEBUG trainer.py: Testing LR "1.6030e-03
+2019-09-20 16:51:05,150 DEBUG trainer.py: Testing LR "1.7020e-03
+2019-09-20 16:51:05,728 DEBUG trainer.py: Testing LR "1.8010e-03
+2019-09-20 16:51:06,293 DEBUG trainer.py: Testing LR "1.9900e-03
+2019-09-20 16:51:06,874 DEBUG trainer.py: Testing LR "2.0800e-03
+2019-09-20 16:51:07,442 DEBUG trainer.py: Testing LR "2.1700e-03
+2019-09-20 16:51:08,001 DEBUG trainer.py: Testing LR "2.2600e-03
+2019-09-20 16:51:08,575 DEBUG trainer.py: Testing LR "2.3500e-03
+2019-09-20 16:51:09,113 DEBUG trainer.py: Testing LR "2.4400e-03
+2019-09-20 16:51:09,665 DEBUG trainer.py: Testing LR "2.5300e-03
+2019-09-20 16:51:10,245 DEBUG trainer.py: Testing LR "2.6200e-03
+2019-09-20 16:51:10,832 DEBUG trainer.py: Testing LR "2.7100e-03
+2019-09-20 16:51:11,984 DEBUG trainer.py:               LR        Loss
+35  1.603000e-03    3.660783
+41  2.260000e-03    3.664069
+20  1.900000e-03    3.674089
+7   1.000000e-03    3.685913
+37  1.801000e-03    3.686472
+36  1.702000e-03    3.689964
+43  2.440000e-03    3.696936
+38  1.990000e-03    3.700714
+44  2.530000e-03    3.703781
+18  8.200000e-04    3.704069
+19  9.100000e-04    3.704168
+42  2.350000e-03    3.723095
+30  1.108000e-03    3.723890
+32  1.306000e-03    3.727480
+39  2.080000e-03    3.729592
+45  2.620000e-03    3.730235
+33  1.405000e-03    3.732670
+40  2.170000e-03    3.736349
+21  2.800000e-03    3.745370
+34  1.504000e-03    3.746042
+29  1.009000e-03    3.755110
+31  1.207000e-03    3.764296
+46  2.710000e-03    3.780825
+22  3.700000e-03    3.788285
+16  6.400000e-04    3.799282
+17  7.300000e-04    3.811159
+15  5.500000e-04    3.814085
+14  4.600000e-04    3.840563
+23  4.600000e-03    3.869999
+13  3.700000e-04    3.871474
+24  5.500000e-03    3.897358
+12  2.800000e-04    3.953101
+25  6.400000e-03    3.983789
+11  1.900000e-04    3.989531
+26  7.300000e-03    3.993599
+27  8.200000e-03    4.069832
+28  9.100000e-03    4.087095
+8   1.000000e-02    4.128236
+6   1.000000e-04    4.146591
+2   1.000000e-08    4.322685
+5   1.000000e-05    4.333673
+3   1.000000e-07    4.354816
+4   1.000000e-06    4.369911
+1   1.000000e-09    4.385804
+0   0.000000e+00    4.386826
+9   1.000000e-01   12.238940
+10  1.000000e+00  117.166386
+2019-09-20 16:51:12,014 INFO trainer.py: Autotune LR finished. New LR is "1.603e-03" with train loss "3.6607832593841203
+2019-09-20 16:51:12,036 INFO trainer.py: ##################################################
+2019-09-20 16:51:12,036 INFO trainer.py: Epoch [1/10]
+2019-09-20 16:52:33,579 INFO trainer.py: Train accuracy 86.308545
+2019-09-20 16:52:40,127 INFO trainer.py: Validation accuracy 95.263237
+2019-09-20 16:52:40,145 INFO trainer.py: ##################################################
+2019-09-20 16:52:40,146 INFO trainer.py: Epoch [2/10]
+2019-09-20 16:54:01,362 INFO trainer.py: Train accuracy 94.651920
+2019-09-20 16:54:08,018 INFO trainer.py: Validation accuracy 96.657585
+2019-09-20 16:54:08,037 INFO trainer.py: ##################################################
+2019-09-20 16:54:08,037 INFO trainer.py: Epoch [3/10]
+2019-09-20 16:55:29,764 INFO trainer.py: Train accuracy 95.922742
+2019-09-20 16:55:36,469 INFO trainer.py: Validation accuracy 96.801037
+2019-09-20 16:55:36,495 INFO trainer.py: ##################################################
+2019-09-20 16:55:36,495 INFO trainer.py: Epoch [4/10]
+2019-09-20 16:56:58,627 INFO trainer.py: Train accuracy 96.523218
+2019-09-20 16:57:05,229 INFO trainer.py: Validation accuracy 97.079332
+2019-09-20 16:57:05,245 INFO trainer.py: ##################################################
+2019-09-20 16:57:05,245 INFO trainer.py: Epoch [5/10]
+2019-09-20 16:58:27,107 INFO trainer.py: Train accuracy 96.975347
+2019-09-20 16:58:33,786 INFO trainer.py: Validation accuracy 97.211308
+2019-09-20 16:58:33,808 INFO trainer.py: ##################################################
+2019-09-20 16:58:33,809 INFO trainer.py: Epoch [6/10]
+2019-09-20 16:59:55,770 INFO trainer.py: Train accuracy 97.366719
+2019-09-20 17:00:02,304 INFO trainer.py: Validation accuracy 97.506817
+2019-09-20 17:00:02,324 INFO trainer.py: ##################################################
+2019-09-20 17:00:02,324 INFO trainer.py: Epoch [7/10]
+2019-09-20 17:01:25,737 INFO trainer.py: Train accuracy 97.581898
+2019-09-20 17:01:33,019 INFO trainer.py: Validation accuracy 97.326069
+2019-09-20 17:01:33,029 INFO trainer.py: ##################################################
+2019-09-20 17:01:33,029 INFO trainer.py: Epoch [8/10]
+2019-09-20 17:02:56,856 INFO trainer.py: Train accuracy 97.805684
+2019-09-20 17:03:03,470 INFO trainer.py: Validation accuracy 97.458044
+2019-09-20 17:03:03,493 INFO trainer.py: ##################################################
+2019-09-20 17:03:03,493 INFO trainer.py: Epoch [9/10]
+2019-09-20 17:04:25,605 INFO trainer.py: Train accuracy 98.063899
+2019-09-20 17:04:32,160 INFO trainer.py: Validation accuracy 97.618710
+2019-09-20 17:04:32,180 INFO trainer.py: ##################################################
+2019-09-20 17:04:32,181 INFO trainer.py: Epoch [10/10]
+2019-09-20 17:05:54,310 INFO trainer.py: Train accuracy 98.169210
+2019-09-20 17:06:00,969 INFO trainer.py: Validation accuracy 97.561329
+2019-09-20 17:06:08,210 INFO trainer.py: Test accuracy 96.002287
+2019-09-20 17:06:08,261 INFO main_allneighbors.py: Validation Score: 97.5613	Test Score: 96.0023
